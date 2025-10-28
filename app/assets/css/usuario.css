@@ -1,0 +1,358 @@
+/* VISUALIZAÇÕES SEM GRÁFICOS */
+.barras-horizontais,
+.comparativo-mensal,
+.distribuicao-consumo,
+.picos-horarios,
+.participacao-equipamentos,
+.projecao-consumo {
+  padding: 1rem 0;
+}
+
+/* Barras horizontais */
+.barras-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.legenda {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.barras-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.barra-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.barra-label {
+  font-size: 0.8rem;
+  width: 40px;
+  text-align: right;
+}
+
+.barra {
+  flex: 1;
+  background: var(--border);
+  border-radius: 4px;
+  height: 20px;
+  position: relative;
+}
+
+.barra-preenchimento {
+  background: var(--primary);
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.barra-valor {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* Comparativo mensal */
+.comparativo-barras {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  height: 150px;
+  gap: 0.5rem;
+}
+
+.mes-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.mes-barra {
+  height: 120px;
+  width: 100%;
+  background: var(--border);
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+
+.mes-barra-preenchimento {
+  background: var(--primary);
+  width: 100%;
+  border-radius: 4px;
+  transition: height 0.3s ease;
+  position: relative;
+}
+
+.mes-valor {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.mes-variacao {
+  font-size: 0.7rem;
+  margin-top: 0.25rem;
+}
+
+.mes-variacao.positivo {
+  color: #f44336;
+}
+
+.mes-variacao.negativo {
+  color: #2E7D32;
+}
+
+/* Distribuição de consumo */
+.distribuicao-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.categoria-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categoria-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.categoria-cor {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.categoria-valor {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100px;
+}
+
+.categoria-barra {
+  flex: 1;
+  background: var(--border);
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.categoria-barra-preenchimento {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Picos horários */
+.picos-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  height: 120px;
+  gap: 0.5rem;
+}
+
+.pico-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.pico-barra {
+  width: 100%;
+  background: var(--primary-light);
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  transition: height 0.3s ease;
+  min-height: 20px;
+}
+
+.pico-barra.alto {
+  background: #f44336;
+}
+
+.pico-barra.medio {
+  background: #FF9800;
+}
+
+.pico-barra.baixo {
+  background: #4CAF50;
+}
+
+.pico-valor {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* Participação de equipamentos */
+.equipamentos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.equipamento-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: rgba(46, 125, 50, 0.05);
+  border-radius: 6px;
+}
+
+.equipamento-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.equipamento-cor {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.equipamento-detalhes {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+.equipamento-porcentagem {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* Projeção */
+.projecao-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.projecao-legenda {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+.legenda-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cor-projecao {
+  width: 12px;
+  height: 12px;
+  background: #2196F3;
+  border-radius: 2px;
+}
+
+.cor-meta {
+  width: 12px;
+  height: 12px;
+  background: #2E7D32;
+  border-radius: 2px;
+}
+
+.projecao-grafico {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  height: 140px;
+  gap: 0.5rem;
+}
+
+.projecao-mes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.projecao-barras {
+  height: 120px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+
+.barra-meta {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(46, 125, 50, 0.2);
+  border: 1px dashed #2E7D32;
+}
+
+.barra-projecao {
+  position: relative;
+  width: 100%;
+  background: #2196F3;
+  border-radius: 4px 4px 0 0;
+  z-index: 2;
+}
+
+.barra-projecao.dentro-meta {
+  background: #4CAF50;
+}
+
+.barra-projecao.acima-meta {
+  background: #f44336;
+}
+
+.projecao-valor {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.projecao-status {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.projecao-status.dentro-meta {
+  color: #4CAF50;
+}
+
+.projecao-status.acima-meta {
+  color: #f44336;
+}

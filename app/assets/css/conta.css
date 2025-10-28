@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+  color: #222;
+}
+
+.container {
+  padding: 30px;
+  margin-left: 240px; /* espaço se tiver sidebar */
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.sidebar {
+  width: 240px;
+  background: #161616;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.75rem;
+  gap: 1rem;
+  position: fixed;  /* 🔒 fixo na tela */
+  top: 0;
+  left: 0;
+}
+
+/* Main */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 240px; /* 🔒 evita sobreposição */
+}
+
+@media (max-width: 600px){
+  .main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px; /* 🔒 evita sobreposição */
+}
+}
+
+
+.sidebar .profile{
+  text-align:center;
+  margin:0.25rem 0 0.75rem 0;
+}
+.sidebar .profile img{
+  width:84px;height:84px;border-radius:50%;
+  object-fit:cover;border:3px solid var(--primary-color);
+  box-shadow:0 0 0 6px rgba(4,182,0,.15);
+}
+.sidebar .profile h3{
+  margin:0.5rem 0 0.25rem 0;font-size:1.05rem;
+}
+.sidebar .profile p{margin:0;font-size:0.85rem;color:#cbd5d6}
+.sidebar .menu{list-style:none;padding:0;margin:0}
+.sidebar .menu li{
+  padding:12px 14px;border-radius:12px;
+  cursor:pointer;display:flex;align-items:center;gap:12px;
+  transition:.25s; color:#e8eaea;
+}
+
+.sidebar .menu a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.sidebar .menu li:hover{background:rgba(255,255,255,.08); transform:translateX(2px)}
+.sidebar .menu li.active{background:rgba(4,182,0,.18); color:#fff}
+.sidebar .menu .logout{margin-top:auto;color:#ff6b6b}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #0a4;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #0a4;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,180,90,0.3);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #00b341, #008f2a);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn i {
+  font-size: 14px;
+}
